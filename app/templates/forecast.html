@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <a class="weather_label">Overcast</a>
+    <form action="/forecast" method="get" onsubmit="return validateForm()">
+        <input type="text" class="location_input" name="location" placeholder="Enter the location..."/>
+        <button type="submit" class="get_forecast_button" id="button">Go
+        </button>
+        <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    </form>
+    {% if temperature is defined %}
+    <div class="answer_container">
+        <div class="icon_container"><img width="80" height="80" alt="icon" src="{{ icon_url }}"/></div>
+        <div class="text_container">
+            <a class="answer_label">{{ location }}</a>
+            <a class="temperature_label">{{ temperature }}°{{ mod }}</a>
+            <a class="open_plot_container" href="{{ url_for('static', filename=plot_path) }}">OPEN PLOT</a>
+        </div>
+        <div class="plot_container">{{ recommendation }}</div>
+    </div>
+    {% elif error_message %}
+    <div class="answer_container">
+        <a class="answer_label">{{ error_message }}</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

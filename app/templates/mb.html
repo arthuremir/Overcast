@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Overcast</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
+
+</head>
+<body>
+<div id="map"></div>
+<form id="map_form" method="get" action="/forecast">
+    <input type="text" name="coords" id="info"/>
+    <button type="submit" class="map_forecast_button" id="mfb_id">GET FORECAST</button>
+</form>
+<script>
+    mapboxgl.accessToken = '{{ MAPBOX_TOKEN }}';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [{{ lon }}, {{ lat }}] ,
+        zoom: {{ zoom }}
+    });
+
+    map.on('click', function (e) {
+        document.getElementById('info').value =
+            JSON.stringify(e.lngLat.wrap());
+    });
+</script>
+
+</body>
+</html>
