@@ -39,13 +39,13 @@
 данные с OpenWeatherMap и возвращает пользователю, подставляя данные в HTML-шаблоны (Jinja2).
 
 Запуск:
-Выполнить:
+Выполнить: <br>
 `git clone https://github.com/arthuremir/Overcast.git`<br>
 `cd Overcast`<br>
 `pip3 install -r requirements.txt`<br>
 `set FLASK_APP=start.py`<br>
-Заполнить файл `keys.cfg`
-Затем запустить сервер:
+Заполнить файл `keys.cfg` <br>
+И запустить сервер:
 `flask run`<br>
 
 Возможные улучшения:
