@@ -1,6 +1,8 @@
 Умный сервис прогноза погоды.
 
-ПРИМЕР РАБОТЫ: https://overcast-ycloud-school.herokuapp.com
+ДЕМО: https://overcast-ycloud-school.herokuapp.com
+
+ЗАПИСЬ РАБОТЫ: https://youtu.be/B1VJ_BuiP-k
 
 Выбранный уровень сложности - задание со звездочкой + интерактивная карта + график с прогнозом
 
