@@ -36,6 +36,12 @@
 При нажатии на кнопку `Go` отправляется GET-запрос на сервер, который в свою очередь запрашивает
 данные с OpenWeatherMap и возвращает пользователю, подставляя данные в HTML-шаблоны (Jinja2).
 
+Запуск:
+`git clone https://github.com/arthuremir/Overcast.git`
+`cd Overcast`
+`pip3 install -r requirements.txt`
+`set FLASK_APP=start.py`
+`flask run`
 
 Возможные улучшения:
 - кэширование
