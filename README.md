@@ -44,13 +44,7 @@
 `cd Overcast`<br>
 `pip3 install -r requirements.txt`<br>
 `set FLASK_APP=start.py`<br>
-
-Добавить файл `keys.cfg` и заполнить в формате:
-`[Keys] <br>
-OWM = <your_openweathermap_key><br>
-MAPBOX = <your_mapbox_key><br>
-SECRET_KEY = smth`<br>
-
+Заполнить файл `keys.cfg`
 Затем запустить сервер:
 `flask run`<br>
 
