@@ -6,9 +6,9 @@
 
 Использованные языки программирования и технологии:
 - Heroku
-- Python, Flask, Gunicorn
+- Python, Flask, Gunicorn, Matplotlib
 - HTML/CSS/JS
-- OpenWeatherMapAPI
+- OpenWeatherMapAPI (PyOWM)
 - MapBoxAPI
 
 Интерфейс представляет собой веб-сайт.
